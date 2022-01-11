@@ -34,7 +34,7 @@ jobs:
         END
         )
         docker run --mount type=bind,source=$(pwd),target=/pwd                 \
-                   quay.io/pypa/manylinux1_${{ matrix.arch }} /bin/bash -c     \
+                   quay.io/pypa/manylinux2014_${{ matrix.arch }} /bin/bash -c     \
                    "${SCRIPT}"
 
     - name: Package
